@@ -11,7 +11,7 @@ def mostrar_cuenta_atras(num):
         else:
             cadena += str(i) + ", "
 
-    print(cadena)
+    return cadena
 
 def main():
     num = -1
@@ -20,8 +20,9 @@ def main():
         if num < 1:
             print("El número tiene que ser positivo")
 
-    mostrar_cuenta_atras(num)
+    cadena = mostrar_cuenta_atras(num)
 
+    print(cadena)
 
 if __name__ == "__main__":
     main()

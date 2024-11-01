@@ -23,17 +23,19 @@ def pedir_ingreso():
 
 def tributa(edad, ingreso):
     if edad == -1 or ingreso == -1:
-        print("Ha ocurrido un error.")
+        return "Ha ocurrido un error."
     elif edad < 16 or ingreso < 1000:
-        print("No tributa.")
+        return "No tributa."
     else:
-         print("Tributa")
+         return "Tributa"
 
 def main():
     edad = pedir_edad()
     ingreso = pedir_ingreso()
 
-    tributa(edad, ingreso)
+    trib = tributa(edad, ingreso)
+
+    print(trib)
 
 
 if __name__ == "__main__":

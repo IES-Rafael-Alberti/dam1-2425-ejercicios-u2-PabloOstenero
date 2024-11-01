@@ -6,9 +6,9 @@ MAYORIA_EDAD = 18
 
 def comprueba_mayor(edad):
     if edad >= MAYORIA_EDAD:
-        print("Eres mayor de edad, toma una cervecita.")
+        return True
     else:
-        print("Eres menor de edad, mejor toma un zumo.")
+        return False
 
 
 def main():
@@ -23,7 +23,12 @@ def main():
             print("Eso no es un número.")
             edad = input("Cuál es tu edad: ")
 
-    comprueba_mayor(edad)
+    mayor = comprueba_mayor(edad)
+
+    if mayor:
+        print("Eres mayor de edad, toma una cervecita.")
+    else:
+        print("Eres menor de edad, mejor toma un zumo.")
 
 
 if __name__ == "__main__":

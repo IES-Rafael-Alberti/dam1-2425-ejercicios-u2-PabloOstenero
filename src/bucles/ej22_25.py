@@ -10,13 +10,14 @@ def palabra_mas_larga(frase):
         if len(frase.split(" ")[i]) > len(palabra):
             palabra = frase.split(" ")[i]
 
-    print(f"La palabra más larga de la frase {frase} es {palabra}")
+    return f"La palabra más larga de la frase {frase} es {palabra}"
 
 
 def main():
     frase = input("Escribe una frase para que diga que palabra es la más larga: \n")
-    palabra_mas_larga(frase)
+    palabra = palabra_mas_larga(frase)
 
+    print(palabra)
 
 if __name__ == "__main__":
     main()

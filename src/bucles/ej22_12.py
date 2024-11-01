@@ -10,14 +10,18 @@ def numero_letra_en_frase(frase, letra):
         if frase_min[i] == letra:
             numero_letra += 1
     
-    print(F"La letra {letra} está {numero_letra} veces en la frase {frase}")
-
+    if numero_letra == 1:
+        return f"La letra {letra} está {numero_letra} vez en la frase {frase}"
+    else:
+        return f"La letra {letra} está {numero_letra} veces en la frase {frase}"
 
 def main():
     frase = input("Escribe una frase: ")
     letra = input("Escribe la letra que va a buscar en la frase: ")
 
-    numero_letra_en_frase(frase, letra)
+    resultado = numero_letra_en_frase(frase, letra)
+
+    print(resultado)
 
 
 if __name__ == "__main__":

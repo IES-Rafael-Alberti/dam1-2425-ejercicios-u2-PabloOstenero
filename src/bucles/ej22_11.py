@@ -8,13 +8,14 @@ def invertir_palabra(palabra):
     for letra in palabra[::-1]:
         palabra_inv += letra
 
-    print(palabra_inv)
+    return palabra_inv
 
 def main():
     palabra = input("Escribe una palabra para invertirla: ")
 
-    invertir_palabra(palabra)
+    invertida = invertir_palabra(palabra)
 
+    print(invertida)
 
 if __name__ == "__main__":
     main()
